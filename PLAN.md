@@ -6,42 +6,22 @@ files touched, and a done-when checklist.
 
 ---
 
-## Phase 1 — #4: Custom domain + Open Graph card
+## Phase 1 — #4: Open Graph / social card
 
 *The link is the first impression — most visitors arrive from LinkedIn.*
-
-**Blocked on:** registering `thanujakalla.com` (any registrar, ~$10–15/yr).
-The OG half is **not** blocked and can ship immediately.
-
-### 4a. Open Graph / social card (no dependencies)
 
 1. Design a 1200×630 card in the site's visual language: near-black ink
    background, "Thanuja Kalla" in Fraunces with the italic teal *Kalla*,
    mono eyebrow, a strip of the particle field. Render it by screenshotting
    a small standalone HTML file at exactly 1200×630 → `public/images/og.jpg`
    (keep the HTML in `og/` so the card is regenerable).
-2. Add to `<head>`: `og:title`, `og:description`, `og:image` (absolute URL),
-   `og:url`, `twitter:card = summary_large_image`, `theme-color`.
+2. Add to `<head>`: `og:title`, `og:description`, `og:image` (absolute URL
+   on the github.io address), `og:url`, `twitter:card = summary_large_image`,
+   `theme-color`.
 3. Validate with an OG preview tool + a real paste into LinkedIn.
 
 **Done when:** pasting the site URL into LinkedIn/iMessage/Slack shows the
 branded card, not a blank tile.
-
-### 4b. Domain cutover (after registration)
-
-1. Add `public/CNAME` containing `thanujakalla.com` (survives builds since
-   Vite copies `public/` verbatim).
-2. Change `vite.config.js` base from `/portfolio/` to `/` — apex domains
-   serve from the root, killing the subpath entirely.
-3. Registrar DNS: four `A` records on `@` → GitHub Pages IPs
-   (185.199.108–111.153) + `CNAME` on `www` → `thanujakalla.github.io`.
-4. Repo → Settings → Pages: set custom domain, wait for DNS check,
-   tick **Enforce HTTPS** once the cert issues (can take ~1 hr).
-5. Update `og:url`/`og:image` absolute URLs and the README live link.
-   Old `github.io/portfolio/` URL auto-redirects — nothing breaks.
-
-**Done when:** `https://thanujakalla.com` loads with a padlock, `www` and the
-old github.io URL both redirect to it.
 
 ---
 
@@ -162,8 +142,7 @@ a minute, with no local tooling involved.
 
 | Phase | Item | Effort | Blocked on |
 |---|---|---|---|
-| 1a | OG card | ~1 hr | — |
-| 1b | Domain | ~30 min + DNS wait | domain registration |
+| 1 | OG card | ~1 hr | — |
 | 2 | Preloader | ~2 hrs | — |
 | 3 | SEO + analytics | ~1.5 hrs | GoatCounter signup |
 | 4 | Micro-interactions | ~3 hrs | — |
