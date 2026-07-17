@@ -238,9 +238,18 @@ section { padding: clamp(5rem, 14vh, 9rem) clamp(1.25rem, 6vw, 6rem); max-width:
 .case__poster--sac { border-color: rgba(111, 211, 199, .35); }
 .case__poster--sac .poster__label { color: var(--teal); }
 .case__poster--sacportal { border-color: rgba(230, 166, 81, .4); }
-.case__poster--sacportal .poster__label { color: var(--amber); }
-.case__poster--sacportal .poster__bars i { background: var(--amber); opacity: .8; }
-.case__poster--sacportal .poster__bars i:nth-child(-n+4) { background: var(--teal); }
+.case__poster--shot { padding: 0; overflow: clip; position: relative; }
+.case__poster--shot img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top; display: block;
+  filter: saturate(.92);
+}
+/* dusk wash so the light screenshot sits comfortably on the dark page */
+.case__poster--shot::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(rgba(11, 14, 20, 0) 55%, rgba(11, 14, 20, .45));
+  pointer-events: none;
+}
 
 .case__link {
   display: inline-flex; align-items: center; gap: .4rem; margin-top: .4rem;
