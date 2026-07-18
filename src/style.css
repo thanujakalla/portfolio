@@ -288,7 +288,7 @@ section { padding: clamp(5rem, 14vh, 9rem) clamp(1.25rem, 6vw, 6rem); max-width:
   height: 100vh; height: 100svh; position: relative; overflow: clip;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   padding-top: clamp(4.5rem, 12vh, 8rem); text-align: center;
-  background: linear-gradient(#0b0e14 0%, #131a33 40%, #33305c 62%, #6e4a63 80%, #c07a4a 97%);
+  background: linear-gradient(#0b0e14 0%, #10162e 38%, #2a2650 60%, #5d3f5e 78%, #b5744a 96%);
 }
 .balcony__eyebrow { position: relative; z-index: 5; }
 .balcony__title {
@@ -306,10 +306,19 @@ section { padding: clamp(5rem, 14vh, 9rem) clamp(1.25rem, 6vw, 6rem); max-width:
 @keyframes twinkle { 0%, 100% { opacity: .85; } 50% { opacity: .25; } }
 .balcony__stars circle { animation: twinkle 3.2s ease-in-out infinite; }
 .balcony__stars circle:nth-child(2n) { animation-delay: 1.4s; }
-.balcony__lamps circle { animation: bulb 3.6s ease-in-out infinite; }
-.balcony__lamps circle:nth-child(2n) { animation-delay: 1.2s; }
-.balcony__lamps circle:nth-child(3n) { animation-delay: 2.4s; }
-@keyframes bulb { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+.balcony__windows rect { animation: twinkle 4.2s ease-in-out infinite; }
+.balcony__windows rect:nth-child(3n) { animation-delay: 1.3s; }
+.balcony__windows rect:nth-child(4n) { animation-delay: 2.2s; }
+.balcony__windows rect:nth-child(5n) { animation-delay: 3.1s; }
+/* the last light on the summit */
+.balcony__glow { animation: alpenglow 7s ease-in-out infinite; }
+@keyframes alpenglow { 0%, 100% { opacity: .3; } 50% { opacity: .55; } }
+/* the gornergrat train crossing its viaduct */
+.balcony__train { animation: train 30s linear infinite; }
+@keyframes train {
+  from { transform: translateX(1500px); }
+  to { transform: translateX(-320px); }
+}
 .balcony__birds path { animation: flock 14s linear infinite; }
 .balcony__birds path:last-child { animation-duration: 18s; animation-delay: 2s; }
 @keyframes flock { from { transform: translateX(-10%); } to { transform: translateX(80%); } }

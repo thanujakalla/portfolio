@@ -36,8 +36,8 @@ Vite + vanilla JS (ES modules, no framework). Four source files:
   (timeline) → `#stories` (case accordions; SAC delivery is
   `.case--featured`, learning portal uses a real screenshot poster) →
   `#curriculum` → `#now`-slot → `#author` (**intentionally `hidden`** — do
-  not delete or un-hide without being asked) → `#balcony` (New York /
-  Central Park scene with the woman silhouette) → `#offduty` (hobby cards:
+  not delete or un-hide without being asked) → `#balcony` (Zermatt /
+  Matterhorn scene with the woman silhouette) → `#offduty` (hobby cards:
   brew game, watchlist toy, travel) → `#contact` → footer.
 - **`src/main.js`** — all behavior. Interactive features that must work for
   everyone (`initBrewGame()`, `initWatchlist()`) run at top level; **all

@@ -226,79 +226,89 @@
       </div>
     </section>
 
-    <!-- ============ DREAM : A BALCONY OVER CENTRAL PARK ============ -->
-    <section class="balcony" id="balcony" aria-label="The dream — a balcony over Central Park, New York">
+    <!-- ============ DREAM : A BALCONY IN ZERMATT ============ -->
+    <section class="balcony" id="balcony" aria-label="The dream — a balcony in Zermatt, beneath the Matterhorn">
       <div class="balcony__pin">
-        <p class="eyebrow balcony__eyebrow">Interlude · The dream · 40.7812° N, 73.9665° W</p>
-        <h2 class="balcony__title" aria-label="New York">New York</h2>
-        <p class="balcony__note">The dream is specific: a high-rise balcony over Central Park at dusk,
-          a warm mug, a cool breeze — the city humming below, the park going gold,
+        <p class="eyebrow balcony__eyebrow">Interlude · The dream · 45.9766° N, 7.6585° E</p>
+        <h2 class="balcony__title" aria-label="Zermatt">Zermatt</h2>
+        <p class="balcony__note">The dream is specific: a chalet balcony in Zermatt at dusk, a warm mug,
+          thin bright air — the village lighting up below, the Matterhorn going gold,
           and a lifetime list of places still left to explore.</p>
 
-        <!-- far: manhattan skyline -->
+        <!-- far: the matterhorn, tip in alpenglow -->
         <div class="layer layer--far" aria-hidden="true">
           <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice">
             <g fill="#151c30">
-              <rect x="10" y="230" width="64" height="190"/>
-              <rect x="96" y="180" width="52" height="240"/>
-              <rect x="170" y="250" width="80" height="170"/>
-              <rect x="272" y="205" width="46" height="215"/>
-              <!-- empire state -->
-              <g>
-                <rect x="380" y="200" width="90" height="220"/>
-                <rect x="398" y="160" width="54" height="46"/>
-                <rect x="412" y="126" width="26" height="38"/>
-                <rect x="422" y="86" width="6" height="42"/>
-              </g>
-              <rect x="510" y="240" width="70" height="180"/>
-              <rect x="600" y="190" width="56" height="230"/>
-              <!-- chrysler-ish spire -->
-              <g>
-                <rect x="700" y="210" width="64" height="210"/>
-                <path d="M700 210 h64 l-12 -18 h-40 z"/>
-                <path d="M716 192 h32 l-8 -14 h-16 z"/>
-                <rect x="729" y="150" width="6" height="30"/>
-              </g>
-              <rect x="810" y="235" width="76" height="185"/>
-              <rect x="910" y="170" width="58" height="250"/>
-              <rect x="990" y="245" width="86" height="175"/>
-              <rect x="1100" y="150" width="50" height="270"/>
-              <rect x="1180" y="255" width="76" height="165"/>
-              <rect x="1290" y="195" width="58" height="225"/>
-              <rect x="1370" y="245" width="60" height="175"/>
+              <!-- flanking ridges -->
+              <path d="M-20 420 L120 300 L220 340 L340 250 L460 330 L520 420 Z"/>
+              <path d="M880 420 L1000 290 L1090 330 L1210 240 L1330 320 L1440 270 L1460 420 Z"/>
+              <!-- the matterhorn: steep east face, summit hooked left -->
+              <path d="M330 420 L520 200 L600 105 L648 52 L640 40 L662 46 L688 96 L724 168 L772 230 L806 280 L900 420 Z"/>
             </g>
+            <!-- last light on the summit -->
+            <path class="balcony__glow" d="M626 78 L648 52 L640 40 L662 46 L678 78 L660 88 L640 84 Z" fill="#e6a651"/>
+            <path d="M596 120 L626 78 L640 84 L660 88 L646 122 L614 130 Z" fill="#f2ece2" opacity=".1"/>
             <g class="balcony__stars" fill="#e6a651">
-              <circle cx="424" cy="80" r="2"/><circle cx="732" cy="146" r="2"/>
-              <circle cx="1104" cy="140" r="2"/><circle cx="140" cy="170" r="2"/>
-              <circle cx="940" cy="160" r="2"/>
+              <circle cx="240" cy="120" r="2"/><circle cx="480" cy="70" r="2"/>
+              <circle cx="900" cy="90" r="2"/><circle cx="1150" cy="130" r="2"/>
+              <circle cx="1350" cy="80" r="2"/>
             </g>
           </svg>
         </div>
 
-        <!-- mid: central park canopy, lamps, pond -->
+        <!-- mid: chalet village, church spire, the little train on its viaduct -->
         <div class="layer layer--mid" aria-hidden="true">
           <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice">
-            <g fill="#0f1a1a">
-              <ellipse cx="60" cy="392" rx="110" ry="52"/>
-              <ellipse cx="230" cy="400" rx="130" ry="64"/>
-              <ellipse cx="420" cy="390" rx="120" ry="50"/>
-              <ellipse cx="600" cy="404" rx="140" ry="62"/>
-              <ellipse cx="790" cy="392" rx="120" ry="54"/>
-              <ellipse cx="980" cy="402" rx="140" ry="60"/>
-              <ellipse cx="1170" cy="390" rx="120" ry="52"/>
-              <ellipse cx="1360" cy="400" rx="130" ry="60"/>
-              <ellipse cx="140" cy="366" rx="60" ry="30"/>
-              <ellipse cx="520" cy="362" rx="66" ry="28"/>
-              <ellipse cx="900" cy="360" rx="62" ry="30"/>
-              <ellipse cx="1270" cy="364" rx="64" ry="28"/>
+            <!-- railway embankment at the village edge -->
+            <rect x="-20" y="357" width="1480" height="8" fill="#0e1420"/>
+            <!-- the gornergrat train, sliding home behind the chalets -->
+            <g class="balcony__train">
+              <g fill="#0d1320">
+                <rect x="0" y="328" width="84" height="29" rx="6"/>
+                <rect x="92" y="328" width="84" height="29" rx="6"/>
+                <rect x="184" y="328" width="84" height="29" rx="6"/>
+              </g>
+              <g fill="#e6a651">
+                <rect x="10" y="336" width="12" height="10" rx="2"/><rect x="30" y="336" width="12" height="10" rx="2"/>
+                <rect x="50" y="336" width="12" height="10" rx="2"/>
+                <rect x="102" y="336" width="12" height="10" rx="2"/><rect x="122" y="336" width="12" height="10" rx="2"/>
+                <rect x="142" y="336" width="12" height="10" rx="2"/>
+                <rect x="194" y="336" width="12" height="10" rx="2"/><rect x="214" y="336" width="12" height="10" rx="2"/>
+                <rect x="234" y="336" width="12" height="10" rx="2"/>
+              </g>
             </g>
-            <!-- the pond, catching the last light -->
-            <ellipse cx="700" cy="416" rx="150" ry="18" fill="#3a3050" opacity=".8"/>
-            <g class="balcony__lamps" fill="#e6a651">
-              <circle cx="180" cy="370" r="4"/><circle cx="360" cy="380" r="4"/>
-              <circle cx="560" cy="372" r="4"/><circle cx="760" cy="382" r="4"/>
-              <circle cx="960" cy="370" r="4"/><circle cx="1160" cy="378" r="4"/>
-              <circle cx="1330" cy="372" r="4"/>
+            <!-- pines -->
+            <g fill="#0e1622">
+              <path d="M60 420 l26 -70 l26 70 z M74 372 l12 -34 l12 34 z"/>
+              <path d="M180 420 l22 -58 l22 58 z M190 380 l12 -30 l12 30 z"/>
+              <path d="M700 420 l24 -64 l24 64 z M712 376 l12 -32 l12 32 z"/>
+              <path d="M1050 420 l22 -56 l22 56 z"/>
+            </g>
+            <!-- chalets + church -->
+            <g fill="#101724">
+              <path d="M240 420 v-70 l50 -36 l50 36 v70 z"/>
+              <path d="M400 420 v-56 l42 -30 l42 30 v56 z"/>
+              <path d="M540 420 v-64 l46 -34 l46 34 v64 z"/>
+              <path d="M790 420 v-52 l40 -28 l40 28 v52 z"/>
+              <path d="M920 420 v-66 l48 -34 l48 34 v66 z"/>
+              <path d="M1150 420 v-56 l42 -30 l42 30 v56 z"/>
+              <path d="M1300 420 v-62 l44 -32 l44 32 v62 z"/>
+              <!-- church spire -->
+              <g>
+                <rect x="660" y="300" width="34" height="120"/>
+                <path d="M655 300 h44 l-22 -52 z"/>
+                <circle cx="677" cy="316" r="6" fill="#0b0e14"/>
+              </g>
+            </g>
+            <g class="balcony__windows" fill="#e6a651">
+              <rect x="264" y="368" width="12" height="14"/><rect x="304" y="368" width="12" height="14"/>
+              <rect x="420" y="380" width="11" height="13"/><rect x="452" y="380" width="11" height="13"/>
+              <rect x="562" y="372" width="12" height="14"/><rect x="600" y="372" width="12" height="14"/>
+              <rect x="806" y="384" width="11" height="13"/>
+              <rect x="940" y="370" width="12" height="14"/><rect x="980" y="370" width="12" height="14"/>
+              <rect x="1170" y="380" width="11" height="13"/><rect x="1202" y="380" width="11" height="13"/>
+              <rect x="1318" y="374" width="12" height="14"/><rect x="1356" y="374" width="12" height="14"/>
+              <rect x="670" y="336" width="8" height="12"/>
             </g>
             <g class="balcony__birds" fill="none" stroke="#f2ece2" stroke-width="3" stroke-linecap="round">
               <path d="M300 110 q10 -12 20 0 q10 -12 20 0"/>
