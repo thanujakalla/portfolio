@@ -27,6 +27,15 @@ Deploy = push to `main`; `.github/workflows/deploy.yml` builds and publishes
 Pages automatically (~30 s). Confirm with
 `gh run list --repo thanujakalla/portfolio --limit 1`.
 
+**Don't trust a post-deploy screenshot at face value** — GitHub Pages caches
+`index.html` for 10 min with no header override available, so a browser can
+silently reload a stale shell. Every page load logs `build <sha> · <time>` to
+the console (via `vite.config.js`'s `define`, sourced from `git rev-parse
+--short HEAD` at build time) and sets `document.documentElement.dataset
+.build`. When verifying a deploy, check that stamp against
+`git log -1 --format=%h` — don't assume a reload got the new build. See
+README "Verifying a deploy actually landed" for the full explanation.
+
 ## Architecture
 
 Vite + vanilla JS (ES modules, no framework). Four source files:

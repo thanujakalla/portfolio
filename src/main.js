@@ -14,6 +14,11 @@ import { createScene } from './scene.js';
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = window.matchMedia('(pointer: fine)').matches;
 
+// GitHub Pages caches index.html for 10 min with no way to override it —
+// this proves which build is actually live instead of guessing from a reload.
+document.documentElement.dataset.build = `${__BUILD_SHA__}@${__BUILD_TIME__}`;
+console.log(`build ${__BUILD_SHA__} · ${__BUILD_TIME__}`);
+
 const sceneApi = createScene(document.getElementById('scene'), { reducedMotion });
 
 /* —————————————————— the brew game & watchlist (work regardless of motion prefs) —————————————————— */

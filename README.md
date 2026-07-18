@@ -54,6 +54,18 @@ npm run preview   # serve the production build
 
 Every push to `main` triggers the GitHub Actions workflow, which builds the site and deploys `dist/` to GitHub Pages. The Vite `base` is set to `/portfolio/` for production builds only, so local dev stays at `/`.
 
+### Verifying a deploy actually landed
+
+GitHub Pages caches `index.html` for **10 minutes** (`Cache-Control: max-age=600`) and there's no way to override that on Pages — so a plain reload right after a push can still show you yesterday's page even though the new build already succeeded. The code itself is never stale (every JS/CSS file is content-hashed, so a new build always ships under a new filename) — only the HTML shell can lag.
+
+To check what's *actually* live, don't eyeball it — read the build stamp:
+
+- Open DevTools Console on the live site — it logs `build <sha> · <ISO time>` on every load.
+- Or check `document.documentElement.dataset.build` in the console.
+- Compare the `<sha>` against `git log -1 --format=%h` for what you just pushed.
+
+If the stamp is old: hard-refresh (**Cmd+Shift+R** / **Ctrl+Shift+R**) or open the URL in an incognito window — both bypass the browser's local cache and force a fresh fetch. Waiting also works; the CDN edge itself updates well before the 10-minute mark (usually near-instant, per `x-cache: MISS` on a fresh check), so it's almost always your own browser holding the old copy, not GitHub.
+
 ## Accessibility & craft
 
 - `prefers-reduced-motion: reduce` → Lenis and GSAP are skipped entirely, the WebGL scene renders one static frame, and everything is visible; the interactive games still work (they're user-initiated).
