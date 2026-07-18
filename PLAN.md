@@ -24,7 +24,7 @@ cinematic sentences.
   Lenis smooth scroll, Three.js custom shader background.
 - `index.html` — all markup. Sections in order: hero → `.kinetic` →
   `#work` → `#stories` (case accordions) → `#curriculum` → `#author`
-  (hidden via `hidden` attr) → `#balcony` (Zermatt scene) → `#offduty`
+  (hidden via `hidden` attr) → `#balcony` (snowy Switzerland scene) → `#offduty`
   (hobby cards) → `#contact` → footer.
 - `src/main.js` — all behavior. Structure: imports → `reducedMotion` /
   `finePointer` consts → `createScene(...)` → `initBrewGame()` /
@@ -375,7 +375,7 @@ file on github.com — commit → auto-deploy, no local tooling.
 
 ### Acceptance
 
-- [ ] Strip renders between Curriculum and the Zermatt interlude
+- [ ] Strip renders between Curriculum and the Switzerland interlude
 - [ ] Deleting/breaking now.json removes the section cleanly (no errors,
       no empty gap animations)
 - [ ] Works under reduced motion and on mobile width (360px)

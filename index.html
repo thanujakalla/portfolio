@@ -226,28 +226,27 @@
       </div>
     </section>
 
-    <!-- ============ DREAM : A BALCONY IN ZERMATT ============ -->
-    <section class="balcony" id="balcony" aria-label="The dream — a balcony in Zermatt, beneath the Matterhorn">
+    <!-- ============ DREAM : A SNOWY BALCONY IN SWITZERLAND ============ -->
+    <section class="balcony" id="balcony" aria-label="The dream — a snowy chalet balcony in Switzerland">
       <div class="balcony__pin">
-        <p class="eyebrow balcony__eyebrow">Interlude · The dream · 45.9766° N, 7.6585° E</p>
-        <h2 class="balcony__title" aria-label="Zermatt">Zermatt</h2>
-        <p class="balcony__note">The dream is specific: a chalet balcony in Zermatt at dusk, a warm mug,
-          thin bright air — the village lighting up below, the Matterhorn going gold,
+        <p class="eyebrow balcony__eyebrow">Interlude · The dream · 46.8182° N, 8.2275° E</p>
+        <h2 class="balcony__title" aria-label="Switzerland">Switzerland</h2>
+        <p class="balcony__note">The dream is specific: a chalet balcony in the Swiss Alps, snow coming
+          down slow, a warm mug — the village lights holding on below, the peaks going gold,
           and a lifetime list of places still left to explore.</p>
 
-        <!-- far: the matterhorn, tip in alpenglow -->
+        <!-- far: snow-covered peaks, last light on the summit -->
         <div class="layer layer--far" aria-hidden="true">
           <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice">
-            <g fill="#151c30">
-              <!-- flanking ridges -->
-              <path d="M-20 420 L120 300 L220 340 L340 250 L460 330 L520 420 Z"/>
-              <path d="M880 420 L1000 290 L1090 330 L1210 240 L1330 320 L1440 270 L1460 420 Z"/>
-              <!-- the matterhorn: steep east face, summit hooked left -->
-              <path d="M330 420 L520 200 L600 105 L648 52 L640 40 L662 46 L688 96 L724 168 L772 230 L806 280 L900 420 Z"/>
-            </g>
+            <!-- flanking ridges, snow in shadow -->
+            <path d="M-20 420 L120 300 L220 340 L340 250 L460 330 L520 420 Z" fill="#7f8aa4"/>
+            <path d="M880 420 L1000 290 L1090 330 L1210 240 L1330 320 L1440 270 L1460 420 Z" fill="#7f8aa4"/>
+            <!-- the peak, snow-lit -->
+            <path d="M330 420 L520 200 L600 105 L648 52 L640 40 L662 46 L688 96 L724 168 L772 230 L806 280 L900 420 Z" fill="#e9e4d8"/>
+            <!-- cold east face in shadow -->
+            <path d="M662 46 L688 96 L724 168 L772 230 L806 280 L900 420 L742 420 L704 250 L671 118 Z" fill="#9aa5bc"/>
             <!-- last light on the summit -->
             <path class="balcony__glow" d="M626 78 L648 52 L640 40 L662 46 L678 78 L660 88 L640 84 Z" fill="#e6a651"/>
-            <path d="M596 120 L626 78 L640 84 L660 88 L646 122 L614 130 Z" fill="#f2ece2" opacity=".1"/>
             <g class="balcony__stars" fill="#e6a651">
               <circle cx="240" cy="120" r="2"/><circle cx="480" cy="70" r="2"/>
               <circle cx="900" cy="90" r="2"/><circle cx="1150" cy="130" r="2"/>
@@ -259,7 +258,8 @@
         <!-- mid: chalet village, church spire, the little train on its viaduct -->
         <div class="layer layer--mid" aria-hidden="true">
           <svg viewBox="0 0 1440 420" preserveAspectRatio="xMidYMax slice">
-            <!-- railway embankment at the village edge -->
+            <!-- railway embankment at the village edge, snow on the shoulder -->
+            <rect x="-20" y="354" width="1480" height="4" fill="#e9e4d8" opacity=".85"/>
             <rect x="-20" y="357" width="1480" height="8" fill="#0e1420"/>
             <!-- the gornergrat train, sliding home behind the chalets -->
             <g class="balcony__train">
@@ -299,6 +299,32 @@
                 <path d="M655 300 h44 l-22 -52 z"/>
                 <circle cx="677" cy="316" r="6" fill="#0b0e14"/>
               </g>
+            </g>
+            <!-- snow on every roof -->
+            <g stroke="#e9e4d8" stroke-width="9" fill="none" stroke-linecap="round">
+              <path d="M238 352 L290 312 L342 352"/>
+              <path d="M398 366 L442 332 L486 366"/>
+              <path d="M538 358 L586 320 L634 358"/>
+              <path d="M788 370 L830 338 L872 370"/>
+              <path d="M918 356 L968 318 L1018 356"/>
+              <path d="M1148 366 L1192 332 L1236 366"/>
+              <path d="M1298 360 L1344 324 L1390 360"/>
+            </g>
+            <path d="M652 302 L677 246 L702 302" stroke="#e9e4d8" stroke-width="7" fill="none" stroke-linecap="round"/>
+            <!-- snow dust on the pines -->
+            <g fill="#e9e4d8" opacity=".9">
+              <path d="M76 368 l10 -26 l10 26 z"/>
+              <path d="M192 382 l10 -24 l10 24 z"/>
+              <path d="M714 378 l10 -26 l10 26 z"/>
+              <path d="M1062 386 l10 -22 l10 22 z"/>
+            </g>
+            <!-- snow on the ground, drifted -->
+            <g fill="#e9e4d8">
+              <rect x="-20" y="404" width="1480" height="16"/>
+              <ellipse cx="200" cy="406" rx="150" ry="9"/>
+              <ellipse cx="620" cy="408" rx="170" ry="8"/>
+              <ellipse cx="1050" cy="406" rx="160" ry="9"/>
+              <ellipse cx="1380" cy="408" rx="120" ry="8"/>
             </g>
             <g class="balcony__windows" fill="#e6a651">
               <rect x="264" y="368" width="12" height="14"/><rect x="304" y="368" width="12" height="14"/>
@@ -355,12 +381,23 @@
               <path d="M120 392 h64 l-8 -46 h-48 z"/>
               <path d="M152 346 q-28 -42 -8 -72 q15 28 8 72 M152 346 q28 -36 11 -68 q-18 24 -11 68 M152 346 q-2 -46 -31 -55 q5 31 31 55" fill="#0b1420"/>
             </g>
+            <!-- snow settled on the balcony -->
+            <g fill="#e9e4d8">
+              <rect x="0" y="321" width="928" height="6" rx="3"/>
+              <rect x="1016" y="321" width="424" height="6" rx="3"/>
+              <rect x="124" y="342" width="58" height="5" rx="2.5"/>
+              <ellipse cx="230" cy="392" rx="150" ry="5"/>
+              <ellipse cx="1330" cy="392" rx="110" ry="5"/>
+            </g>
             <g class="balcony__steam" fill="none" stroke="#f2ece2" stroke-width="3" stroke-linecap="round" opacity=".55">
               <path class="steam steam--1" d="M1060 292 q6 -10 0 -20 q-6 -10 0 -20"/>
               <path class="steam steam--2" d="M1071 294 q-6 -10 0 -20 q6 -10 0 -20"/>
             </g>
           </svg>
         </div>
+
+        <!-- snow, coming down slow -->
+        <div class="balcony__snowfall" aria-hidden="true"></div>
       </div>
     </section>
 

@@ -16,7 +16,7 @@ The background carries the same narrative. A WebGL field of drifting "data motes
 - **Kinetic interlude** — a pinned, scroll-scrubbed 3D type sequence: *Data arrives messy. / I clean it. Model it. Question it. / Until it reads like a decision.*
 - **The Work** — a scroll-lit timeline of roles with exact resume numbers.
 - **Signature Stories** — accordion case studies with cursor-tilting chart posters, including a featured end-to-end SAC delivery story and a work-in-progress [SAC AI Learning Portal](https://thanujakalla.github.io/sap-sac-ai-learning-portal/).
-- **The dream** — a pinned, three-layer parallax illustration: a woman on a chalet balcony in Zermatt at dusk, hand-drawn in inline SVG (the Matterhorn in alpenglow, twinkling village windows, the little Gornergrat train sliding behind the chalets, steam rising off a mug).
+- **The dream** — a pinned, three-layer parallax illustration: a woman on a snowy chalet balcony in Switzerland, hand-drawn in inline SVG — a snow-lit peak in alpenglow, falling snow at three depths, snow-capped roofs and railings, twinkling village windows, and a little train sliding behind the chalets.
 - **Off duty** — a working "Perfect Brew" hold-and-release game, a "Suggest my next series" watchlist toy, and a travel card with a looping paper plane.
 - **The read-line** — a thin amber-to-teal progress bar that only completes if you see the story through; the same progress is what organizes the particles.
 

@@ -288,7 +288,7 @@ section { padding: clamp(5rem, 14vh, 9rem) clamp(1.25rem, 6vw, 6rem); max-width:
   height: 100vh; height: 100svh; position: relative; overflow: clip;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   padding-top: clamp(4.5rem, 12vh, 8rem); text-align: center;
-  background: linear-gradient(#0b0e14 0%, #10162e 38%, #2a2650 60%, #5d3f5e 78%, #b5744a 96%);
+  background: linear-gradient(#0b0e14 0%, #121a32 36%, #2c3054 58%, #5a4a72 76%, #b57a55 96%);
 }
 .balcony__eyebrow { position: relative; z-index: 5; }
 .balcony__title {
@@ -312,7 +312,21 @@ section { padding: clamp(5rem, 14vh, 9rem) clamp(1.25rem, 6vw, 6rem); max-width:
 .balcony__windows rect:nth-child(5n) { animation-delay: 3.1s; }
 /* the last light on the summit */
 .balcony__glow { animation: alpenglow 7s ease-in-out infinite; }
-@keyframes alpenglow { 0%, 100% { opacity: .3; } 50% { opacity: .55; } }
+@keyframes alpenglow { 0%, 100% { opacity: .35; } 50% { opacity: .6; } }
+/* snowfall: three depths, drifting seamlessly (deltas are tile multiples) */
+.balcony__snowfall {
+  position: absolute; inset: 0; z-index: 6; pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(242, 236, 226, .9) 1.5px, transparent 2.1px),
+    radial-gradient(circle, rgba(242, 236, 226, .55) 1.1px, transparent 1.7px),
+    radial-gradient(circle, rgba(242, 236, 226, .3) .9px, transparent 1.4px);
+  background-size: 130px 130px, 190px 190px, 290px 290px;
+  background-position: 0 0, 40px 60px, 90px 30px;
+  animation: snowfall 19s linear infinite;
+}
+@keyframes snowfall {
+  to { background-position: 130px 1300px, -150px 820px, 380px 610px; }
+}
 /* the gornergrat train crossing its viaduct */
 .balcony__train { animation: train 30s linear infinite; }
 @keyframes train {
